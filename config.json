@@ -25,5 +25,8 @@
   },
   "storage": {
     "type": "postgres"
+  },
+  "documents": {
+    
   }
 }
