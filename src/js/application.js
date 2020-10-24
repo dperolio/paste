@@ -1,4 +1,4 @@
-/* eslint-disable quote-props *//* eslint-disable no-unused-vars *//* eslint-disable no-undef *//* eslint-disable no-empty */
+/* eslint-disable no-var *//* eslint-disable object-shorthand *//* eslint-disable quote-props *//* eslint-disable no-unused-vars *//* eslint-disable no-undef *//* eslint-disable no-empty */
 const haste_document = function () {
   this.locked = false;
 };
@@ -345,12 +345,12 @@ haste_document.prototype.load = function (key, callback, lang) {
   $.ajax(`/documents/${key}`, {
     type: 'get',
     dataType: 'json',
-    success (res) {
+    success: function (res) {
       _this.locked = true;
       _this.key = key;
       _this.data = res.data;
       try {
-        let high;
+        var high;
         if (lang === 'txt') {
           high = { value: _this.htmlEscape(res.data) };
         } else if (lang) {
@@ -369,7 +369,7 @@ haste_document.prototype.load = function (key, callback, lang) {
         lineCount: res.data.split('\n').length
       });
     },
-    error () {
+    error: function () {
       callback(false);
     }
   });
