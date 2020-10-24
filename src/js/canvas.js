@@ -74,7 +74,7 @@ presets.o = (x, y, s, dx, dy) => {
     w: 5 * s,
     dx,
     dy,
-    draw: (ctx, t) => {
+    draw (ctx, t) {
       this.x += this.dx;
       this.y += this.dy;
 
