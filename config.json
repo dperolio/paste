@@ -24,6 +24,6 @@
     }
   },
   "storage": {
-    "type": "file"
+    "type": "postgres"
   }
 }
