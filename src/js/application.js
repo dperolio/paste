@@ -340,12 +340,12 @@ haste_document.prototype.htmlEscape = function (s) {
 };
 
 // Get this document from the server and lock it here
-haste_document.prototype.load = function (key, callback, lang) {
-  const _this = this;
-  $.ajax(`/documents/${key}`, {
+haste_document.prototype.load = function(key, callback, lang) {
+  var _this = this;
+  $.ajax('/documents/' + key, {
     type: 'get',
     dataType: 'json',
-    success: function (res) {
+    success: function(res) {
       _this.locked = true;
       _this.key = key;
       _this.data = res.data;
@@ -353,44 +353,46 @@ haste_document.prototype.load = function (key, callback, lang) {
         var high;
         if (lang === 'txt') {
           high = { value: _this.htmlEscape(res.data) };
-        } else if (lang) {
+        }
+        else if (lang) {
           high = hljs.highlight(lang, res.data);
-        } else {
+        }
+        else {
           high = hljs.highlightAuto(res.data);
         }
-      } catch (err) {
+      } catch(err) {
         // failed highlight, fall back on auto
         high = hljs.highlightAuto(res.data);
       }
       callback({
         value: high.value,
-        key,
+        key: key,
         language: high.language || lang,
         lineCount: res.data.split('\n').length
       });
     },
-    error: function () {
+    error: function() {
       callback(false);
     }
   });
 };
 
 // Save this document to the server and lock it here
-haste_document.prototype.save = function (data, callback) {
+haste_document.prototype.save = function(data, callback) {
   if (this.locked) {
     return false;
   }
   this.data = data;
-  const _this = this;
+  var _this = this;
   $.ajax('/documents', {
     type: 'post',
-    data,
+    data: data,
     dataType: 'json',
     contentType: 'text/plain; charset=utf-8',
-    success (res) {
+    success: function(res) {
       _this.locked = true;
       _this.key = res.key;
-      const high = hljs.highlightAuto(data);
+      var high = hljs.highlightAuto(data);
       callback(null, {
         value: high.value,
         key: res.key,
@@ -398,10 +400,13 @@ haste_document.prototype.save = function (data, callback) {
         lineCount: data.split('\n').length
       });
     },
-    error (res) {
+    error: function(res) {
       try {
-        return callback($.parseJSON(res.responseText));
-      } catch (err) {}
+        callback($.parseJSON(res.responseText));
+      }
+      catch (e) {
+        callback({message: 'Something went wrong!'});
+      }
     }
   });
 };
