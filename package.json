@@ -50,7 +50,7 @@
     "dev": "concurrently \"npm run watch-sass\" \"npm run watch-js\" \"node server.js\"",
     "watch-js": "nodemon --watch src --exec \"npm run minify\"",
     "watch-sass": "sass --watch --style=compressed src/styles/main.scss dist/css/main.min.css",
-    "minify": "terser src/js/nouislider.js src/js/canvas.js src/js/application.js src/js/highlight.js src/js/materialize.js\\ -o dist/js/main.min.js -c",
+    "minify": "terser src/js/nouislider.js src/js/canvas.js src/js/application.js src/js/highlight.js src/js/materialize.js\\ -o dist/js/main.min.js -c --source-map",
     "test": "mocha --recursive"
   }
 }
