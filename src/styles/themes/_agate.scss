@@ -1,0 +1,68 @@
+@use '../../../../vizality/src/.vizality/libraries/sass' as *;
+
+[theme='agate'] {
+  .hljs {
+    $base: &;
+	  color: color('contrast');
+    &-name,
+    &-strong {
+      font-weight: 700;
+    }
+    &-code,
+    &-emphasis {
+      font-style: italic;
+    }
+    &-tag {
+      color: #62c8f3;
+    }
+    &-selector-class,
+    &-selector-id,
+    &-template-variable,
+    &-variable {
+      color: #ade5fc;
+    }
+    &-bullet,
+    &-string {
+      color: #a2fca2;
+    }
+    &-attribute,
+    &-built_in,
+    &-builtin-name,
+    &-quote,
+    &-section,
+    &-title,
+    &-type {
+      color: #ffa;
+    }
+    &-bullet,
+    &-number,
+    &-symbol {
+      color: #d36363;
+    }
+    &-keyword,
+    &-literal,
+    &-selector-tag {
+      color: #fcc28c;
+    }
+    &-code,
+    &-comment,
+    &-deletion {
+      color: #888;
+    }
+    &-link,
+    &-regexp {
+      color: #c6b4f0;
+    }
+    &-meta {
+      color: #fc9b9b;
+    }
+    &-deletion {
+      background-color: #fc9b9b;
+      color: #333;
+    }
+    &-addition {
+      background-color: #a2fca2;
+      color: #333;
+    }
+  }
+}

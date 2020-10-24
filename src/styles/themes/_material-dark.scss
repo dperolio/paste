@@ -1,0 +1,71 @@
+@use '../../../../vizality/src/.vizality/libraries/sass' as *;
+
+[theme='material-dark'] {
+  .hljs {
+    $base: &;
+    color: color('contrast');
+    &-comment {
+      color: #656565;
+      font-style: italic;
+    }
+    &-selector-tag {
+      color: #C792EA;
+    }
+    &-string,
+    &-subst {
+      color: #C3E88D;
+    }
+    &-number,
+    &-regexp,
+    &-variable,
+    &-template-variable {
+      color: #F77669;
+    }
+    &-keyword {
+      color: #C792EA;
+    }
+    &-function > #{$base}-title {
+      color: #75A5FF;
+    }
+    &-name {
+      color: #e06c75;
+    }
+    &-type {
+      color: #da4939;
+    }
+    &-attribute {
+      color: #80CBBF;
+    }
+    &-symbol,
+    &-bullet,
+    &-built_in,
+    &-builtin-name,
+    &-link {
+      color: #C792EA;
+    }
+    &-meta {
+      color: #75A5FF;
+    }
+    &-title {
+      color: #75A5FF;
+    }
+    &-section {
+      color: #ffc66d;
+    }
+    &-selector-class {
+      color: #FFCB68;
+    }
+    &-selector-id {
+      color: #F77669;
+    }
+    &-emphasis {
+      font-style: italic;
+    }
+    &-strong {
+      font-weight: bold;
+    }
+    &-link {
+      text-decoration: underline;
+    }
+  }
+}

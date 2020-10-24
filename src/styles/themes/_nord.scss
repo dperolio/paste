@@ -1,0 +1,212 @@
+@use '../../../../vizality/src/.vizality/libraries/sass' as *;
+
+[theme='nord'] {
+  .hljs {
+    $base: &;
+    color: color('contrast');
+    &-selector-tag {
+      color: #81a1c1;
+    }
+    &-selector-id {
+      color: #8fbcbb;
+      font-weight: 700;
+    }
+    &-selector-class {
+      color: #8fbcbb;
+    }
+    &-selector-attr {
+      color: #8fbcbb;
+    }
+    &-selector-pseudo {
+      color: #88c0d0;
+    }
+    &-addition {
+      background-color: rgb(163 190 140 / .5);
+    }
+    &-deletion {
+      background-color: rgb(191 97 106 / .5);
+    }
+    &-built_in,
+    &-type {
+      color: #8fbcbb;
+    }
+    &-class {
+      color: #8fbcbb;
+    }
+    &-function {
+      color: #88c0d0;
+    }
+    &-function > #{$base}-title {
+      color: #88c0d0;
+    }
+    &-keyword,
+    &-literal,
+    &-symbol {
+      color: #81a1c1;
+    }
+    &-number {
+      color: #b48ead;
+    }
+    &-regexp {
+      color: #ebcb8b;
+    }
+    &-string {
+      color: #a3be8c;
+    }
+    &-title {
+      color: #8fbcbb;
+    }
+    &-bullet {
+      color: #81a1c1;
+    }
+    &-code {
+      color: #8fbcbb;
+    }
+    &-emphasis {
+      font-style: italic;
+    }
+    &-formula {
+      color: #8fbcbb;
+    }
+    &-strong {
+      font-weight: 700;
+    }
+    &-link:hover {
+      text-decoration: underline;
+    }
+    &-quote {
+      color: #4c566a;
+    }
+    &-comment {
+      color: #4c566a;
+    }
+    &-doctag {
+      color: #8fbcbb;
+    }
+    &-meta,
+    &-meta-keyword {
+      color: #5e81ac;
+    }
+    &-meta-string {
+      color: #a3be8c;
+    }
+    &-attr {
+      color: #8fbcbb;
+    }
+    &-builtin-name {
+      color: #81a1c1;
+    }
+    &-name {
+      color: #81a1c1;
+    }
+    &-section {
+      color: #88c0d0;
+    }
+    &-tag {
+      color: #81a1c1;
+    }
+    &-template-tag {
+      color: #5e81ac;
+    }
+    &.abnf #{$base}-attribute {
+      color: #88c0d0;
+    }
+    &.abnf #{$base}-symbol {
+      color: #ebcb8b;
+    }
+    &.apache #{$base}-attribute {
+      color: #88c0d0;
+    }
+    &.apache #{$base}-section {
+      color: #81a1c1;
+    }
+    &.arduino #{$base}-built_in {
+      color: #88c0d0;
+    }
+    &.aspectj #{$base}-meta {
+      color: #d08770;
+    }
+    &.aspectj > #{$base}-title {
+      color: #88c0d0;
+    }
+    &.bnf #{$base}-attribute {
+      color: #8fbcbb;
+    }
+    &.clojure #{$base}-name {
+      color: #88c0d0;
+    }
+    &.clojure #{$base}-symbol {
+      color: #ebcb8b;
+    }
+    &.coq #{$base}-built_in {
+      color: #88c0d0;
+    }
+    &.cpp #{$base}-meta-string {
+      color: #8fbcbb;
+    }
+    &.css #{$base}-built_in {
+      color: #88c0d0;
+    }
+    &.css #{$base}-keyword {
+      color: #d08770;
+    }
+    &.diff #{$base}-meta {
+      color: #8fbcbb;
+    }
+    &.ebnf #{$base}-attribute {
+      color: #8fbcbb;
+    }
+    &.glsl #{$base}-built_in {
+      color: #88c0d0;
+    }
+    &.groovy #{$base}-meta:not(:first-child) {
+      color: #d08770;
+    }
+    &.haxe #{$base}-meta {
+      color: #d08770;
+    }
+    &.java #{$base}-meta {
+      color: #d08770;
+    }
+    &.ldif #{$base}-attribute {
+      color: #8fbcbb;
+    }
+    &.lisp #{$base}-name {
+      color: #88c0d0;
+    }
+    &.lua #{$base}-built_in {
+      color: #88c0d0;
+    }
+    &.moonscript #{$base}-built_in {
+      color: #88c0d0;
+    }
+    &.nginx #{$base}-attribute {
+      color: #88c0d0;
+    }
+    &.nginx #{$base}-section {
+      color: #5e81ac;
+    }
+    &.pf #{$base}-built_in {
+      color: #88c0d0;
+    }
+    &.processing #{$base}-built_in {
+      color: #88c0d0;
+    }
+    &.scss #{$base}-keyword {
+      color: #81a1c1;
+    }
+    &.stylus #{$base}-keyword {
+      color: #81a1c1;
+    }
+    &.swift #{$base}-meta {
+      color: #d08770;
+    }
+    &.vim #{$base}-built_in {
+      color: #88c0d0;
+      font-style: italic;
+    }
+    &.yaml #{$base}-meta {
+      color: #d08770;
+    }
+  }
+}

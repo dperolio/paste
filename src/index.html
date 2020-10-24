@@ -1,0 +1,232 @@
+<html mode='dark' theme='atom-one' line-numbers>
+	<head>
+		<title>Vizality Paste</title>
+    <meta charset='utf-8' />
+    <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+    <link  rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400&display=swap'>
+		<link rel='stylesheet' type='text/css' href='css/main.min.css'>
+
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+
+		<meta name='robots' content='noindex, nofollow'>
+
+    <style id='editor-font-family'>
+      @font-face {
+        font-family: 'FiraCode Medium';
+        src: url('https://vizality.com/app/assets/fonts/firacode-medium/firacode-medium.woff2') format('woff2'),
+              url('https://vizality.com/app/assets/fonts/firacode-medium/firacode-medium.woff') format('woff');
+      }
+    </style>
+
+		<script type='text/javascript'>
+			let app = null;
+			// Handle pops
+			const handlePop = (evt) => {
+				const path = evt.target.location.pathname;
+				if (path === '/') {
+          app.newDocument(true);
+        }
+				else {
+          app.loadDocument(path.substring(1, path.length));
+        }
+			};
+			// Set up the pop state to handle loads, skipping the first load
+			// to make chrome behave like others:
+			// http://code.google.com/p/chromium/issues/detail?id=63040
+			setTimeout(() => {
+				window.onpopstate = (evt) => {
+					try {
+            handlePop(evt);
+          } catch(err) { /* not loaded yet */ }
+				};
+			}, 1000);
+			// Construct app and load initial path
+			$(() => {
+				app = new haste('Vizality Paste');
+				handlePop({ target: window });
+			});
+		</script>
+	</head>
+
+	<body>
+    <div class='vz-canvas-wrapper'>
+      <canvas id='canvas'></canvas>
+    </div>
+    <div class='vz-navigation settings'>
+      <div class='vz-navigation-inner'>
+        <div class='vz-form-item'>
+          <div class='input-field col s12'>
+            <select class='vz-select font-family' >
+              <option value='anonymous-pro'>Anonymous Pro</option>
+              <option value='dank-mono'>Dank Mono</option>
+              <option value='dejavu-sans-mono'>DejaVu Sans Mono</option>
+              <option value='firacode-medium'>FiraCode Medium</option>
+              <option value='gintronic'>Gintronic</option>
+              <option value='hack'>Hack</option>
+              <option value='inconsolata'>Inconsolata</option>
+              <option value='input-mono'>Input Mono</option>
+              <option value='jetbrains-mono'>JetBrains Mono</option>
+              <option value='monoid'>Monoid</option>
+              <option value='operator-mono'>Operator Mono</option>
+              <option value='source-code-pro' selected>Source Code Pro</option>
+            </select>
+            <label class='vz-input-label'>Font Family</label>
+          </div>
+        </div>
+        <div class='vz-form-item'>
+          <label class='vz-input-label'>Font Size</label>
+          <div class='vz-input-slider-wrapper'>
+            <div id='font-size-slider'></div>
+          </div>
+        </div>
+        <div class='vz-form-item'>
+          <label class='vz-input-label'>Line Height</label>
+          <div class='vz-input-slider-wrapper'>
+            <div id='line-height-slider'></div>
+          </div>
+        </div>
+        <div class='vz-form-item'>
+          <label class='vz-input-label'>Background Shapes Opacity</label>
+          <div class='vz-input-slider-wrapper'>
+            <div id='background-shapes-opacity-slider'></div>
+          </div>
+        </div>
+        <div class='vz-form-item show-line-numbers-wrapper disabled'>
+          <div class='switch-wrapper'>
+            <input checked type='checkbox'>
+            <label class='vz-input-label vz-switch-label'>Show Line Numbers
+              <input checked type='checkbox' class='show-line-numbers'>
+              <span class='switch'></span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class='close-settings-wrapper'>
+        <a class='vz-button secondary enabled btn waves-effect waves-light btn-flat vz-settings-reset'>Reset to Default</a>
+        <a class='vz-button primary enabled btn waves-effect waves-light btn-flat vz-settings-done'>Done</a>
+      </div>
+    </div>
+    <div class='vz-navigation syntax-themes'>
+      <div class='vz-navigation-inner'>
+        <div class='vz-syntax-theme-item theme-item-agate btn-floating btn-large waves-effect waves-light btn tooltipped' data-position='left' data-tooltip='Agate'>
+          <div class='vz-syntax-theme-block one'></div>
+          <div class='vz-syntax-theme-block two'></div>
+          <div class='vz-syntax-theme-block three'></div>
+        </div>
+        <div class='vz-syntax-theme-item active theme-item-atom-one btn-floating btn-large waves-effect waves-light btn tooltipped' data-position='left' data-tooltip='Atom One'>
+          <div class='vz-syntax-theme-block one'></div>
+          <div class='vz-syntax-theme-block two'></div>
+          <div class='vz-syntax-theme-block three'></div>
+        </div>
+        <div class='vz-syntax-theme-item theme-item-dracula btn-floating btn-large waves-effect waves-light btn tooltipped' data-position='left' data-tooltip='Dracula'>
+          <div class='vz-syntax-theme-block one'></div>
+          <div class='vz-syntax-theme-block two'></div>
+          <div class='vz-syntax-theme-block three'></div>
+        </div>
+        <div class='vz-syntax-theme-item theme-item-gruvbox btn-floating btn-large waves-effect waves-light btn tooltipped' data-position='left' data-tooltip='Gruvbox'>
+          <div class='vz-syntax-theme-block one'></div>
+          <div class='vz-syntax-theme-block two'></div>
+          <div class='vz-syntax-theme-block three'></div>
+        </div>
+        <div class='vz-syntax-theme-item theme-item-hemisu btn-floating btn-large waves-effect waves-light btn tooltipped' data-position='left' data-tooltip='Hemisu'>
+          <div class='vz-syntax-theme-block one'></div>
+          <div class='vz-syntax-theme-block two'></div>
+          <div class='vz-syntax-theme-block three'></div>
+        </div>
+        <div class='vz-syntax-theme-item theme-item-kimbie btn-floating btn-large waves-effect waves-light btn tooltipped' data-position='left' data-tooltip='Kimbie'>
+          <div class='vz-syntax-theme-block one'></div>
+          <div class='vz-syntax-theme-block two'></div>
+          <div class='vz-syntax-theme-block three'></div>
+        </div>
+        <div class='vz-syntax-theme-item theme-item-material-dark btn-floating btn-large waves-effect waves-light btn tooltipped' data-position='left' data-tooltip='Material Dark'>
+          <div class='vz-syntax-theme-block one'></div>
+          <div class='vz-syntax-theme-block two'></div>
+          <div class='vz-syntax-theme-block three'></div>
+        </div>
+        <div class='vz-syntax-theme-item theme-item-monokai-sublime btn-floating btn-large waves-effect waves-light btn tooltipped' data-position='left' data-tooltip='Monokai Sublime'>
+          <div class='vz-syntax-theme-block one'></div>
+          <div class='vz-syntax-theme-block two'></div>
+          <div class='vz-syntax-theme-block three'></div>
+        </div>
+        <div class='vz-syntax-theme-item theme-item-night-owl btn-floating btn-large waves-effect waves-light btn tooltipped' data-position='left' data-tooltip='Night Owl'>
+          <div class='vz-syntax-theme-block one'></div>
+          <div class='vz-syntax-theme-block two'></div>
+          <div class='vz-syntax-theme-block three'></div>
+        </div>
+        <div class='vz-syntax-theme-item theme-item-nord btn-floating btn-large waves-effect waves-light btn tooltipped' data-position='left' data-tooltip='Nord'>
+          <div class='vz-syntax-theme-block one'></div>
+          <div class='vz-syntax-theme-block two'></div>
+          <div class='vz-syntax-theme-block three'></div>
+        </div>
+        <div class='vz-syntax-theme-item theme-item-ocean btn-floating btn-large waves-effect waves-light btn tooltipped' data-position='left' data-tooltip='Ocean'>
+          <div class='vz-syntax-theme-block one'></div>
+          <div class='vz-syntax-theme-block two'></div>
+          <div class='vz-syntax-theme-block three'></div>
+        </div>
+        <div class='vz-syntax-theme-item theme-item-solarized btn-floating btn-large waves-effect waves-light btn tooltipped' data-position='left' data-tooltip='Solarized'>
+          <div class='vz-syntax-theme-block one'></div>
+          <div class='vz-syntax-theme-block two'></div>
+          <div class='vz-syntax-theme-block three'></div>
+        </div>
+        <div class='vz-syntax-theme-item theme-item-tomorrow btn-floating btn-large waves-effect waves-light btn tooltipped' data-position='left' data-tooltip='Tomorrow'>
+          <div class='vz-syntax-theme-block one'></div>
+          <div class='vz-syntax-theme-block two'></div>
+          <div class='vz-syntax-theme-block three'></div>
+        </div>
+        <div class='vz-syntax-theme-item theme-item-zenburn btn-floating btn-large waves-effect waves-light btn tooltipped' data-position='left' data-tooltip='Zenburn'>
+          <div class='vz-syntax-theme-block one'></div>
+          <div class='vz-syntax-theme-block two'></div>
+          <div class='vz-syntax-theme-block three'></div>
+        </div>
+      </div>
+      <div class='close-syntax-themes-wrapper'>
+        <a class='vz-navigation-button enabled close-syntax-themes btn-floating btn-large waves-effect btn tooltipped' data-position='left' data-tooltip='Close Drawer<div class="tooltip-hint">Esc</div>' data-html='true'>
+          <i class='vz-icon new'></i>
+        </a>
+      </div>
+    </div>
+		<div class='vz-navigation'>
+      <div class='vz-navigation-section'>
+        <a class='vz-navigation-logo' href='https://vizality.com'>
+          <svg class='vz-navigation-logo-svg' xmlns='http://www.w3.org/2000/svg' viewBox='0, 0, 400, 230'>
+            <path class='vz-navigation-logo-path' fill='currentColor' d='M0.000 0.368 C 0.000 1.271,60.129 225.001,60.461 225.333 C 60.665 225.537,96.039 190.498,139.070 147.468 L 217.307 69.231 174.236 69.231 L 131.165 69.231 111.766 88.619 C 101.096 99.282,92.216 107.850,92.032 107.657 C 91.848 107.465,85.416 83.769,77.737 55.000 C 70.059 26.231,63.596 2.087,63.375 1.346 C 62.992 0.062,0.000 -0.910,0.000 0.368 M139.231 27.303 L 139.231 54.605 194.808 54.803 L 250.385 55.000 163.121 142.500 L 75.857 230.000 206.390 230.000 L 336.923 230.000 336.923 196.923 L 336.923 163.846 286.732 163.846 L 236.541 163.846 318.462 81.923 L 400.382 0.000 269.806 0.000 L 139.231 0.000 139.231 27.303'/>
+          </svg>
+        </a>
+        <div class='vz-navigation-actions'>
+          <a class='vz-navigation-button vz-navigation-action save btn-floating btn-large waves-effect btn tooltipped' data-position='left' data-tooltip='Save Document<div class="tooltip-hint">Ctrl + S</div>' data-html='true'>
+            <i class='vz-icon save'></i>
+          </a>
+          <a class='vz-navigation-button vz-navigation-action new btn-floating btn-large waves-effect btn tooltipped' data-position='left' data-tooltip='New Document<div class="tooltip-hint">Ctrl + N</div>' data-html='true'>
+            <i class='vz-icon new'></i>
+          </a>
+          <a class='vz-navigation-button vz-navigation-action edit btn-floating btn-large waves-effect btn tooltipped' data-position='left' data-tooltip='Duplicate & Edit<div class="tooltip-hint">Ctrl + D</div>' data-html='true'>
+            <i class='vz-icon edit'></i>
+          </a>
+          <a class='vz-navigation-button vz-navigation-action raw btn-floating btn-large waves-effect btn tooltipped' data-position='left' data-tooltip='Raw Text<div class="tooltip-hint">Ctrl + Shift + R</div>' data-html='true'>
+            <i class='vz-icon raw'></i>
+          </a>
+        </div>
+      </div>
+      <div class='vz-navigation-section'>
+        <div class='vz-navigation-extras'>
+          <a class='vz-navigation-button vz-navigation-action vz-navigation-extra theme btn-floating btn-large waves-effect btn tooltipped' data-position='left' data-tooltip='Syntax Themes<div class="tooltip-hint">Ctrl + K</div>' data-html='true'>
+            <i class='vz-icon theme'></i>
+          </a>
+          <a class='vz-navigation-button enabled vz-navigation-extra mode btn-floating btn-large waves-effect btn tooltipped' data-position='left' data-tooltip='Toggle Mode<div class="tooltip-hint">Ctrl + M</div>' data-html='true'>
+            <i class='vz-icon material-icons light'>wb_sunny</i>
+            <i class='vz-icon material-icons dark'>brightness_2</i>
+          </a>
+          <a class='vz-navigation-button enabled vz-navigation-extra settings btn-floating btn-large waves-effect btn tooltipped' data-position='left' data-tooltip='Settings<div class="tooltip-hint">Ctrl + ,</div>' data-html='true'>
+            <i class='vz-icon material-icons'>settings</i>
+          </a>
+        </div>
+      </div>
+		</div>
+    <pre style='display: none;' class='vz-locked hljs'>
+      <div class='vz-lines'></div>
+      <code></code>
+    </pre>
+    <textarea class='vz-textarea' spellcheck='false' style='display: none;'></textarea>
+    <script type='text/javascript' src='js/main.min.js'></script>
+	</body>
+</html>

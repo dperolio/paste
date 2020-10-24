@@ -1,0 +1,68 @@
+@use '../../../../vizality/src/.vizality/libraries/sass' as *;
+
+[theme='dracula'] {
+  .hljs {
+    $base: &;
+    color: color('contrast');
+    &-keyword,
+    &-link,
+    &-section,
+    &-selector-tag,
+    &-function #{$base}-keyword {
+      color: #ff79c6;
+    }
+    &-subst {
+      color: color('contrast');
+    }
+    &-title,
+    &-selector-class {
+      color: #50fa7b;
+    }
+    &-function {
+      color: #ffb86c;
+    }
+    &-addition,
+    &-attribute,
+    &-bullet,
+    &-name,
+    &-string,
+    &-symbol,
+    &-template-tag,
+    &-template-variable,
+    &-type,
+    &-variable {
+      color: #8be9fd;
+    }
+    &-string {
+      color: #f1fa8c;
+      @at-root [mode='dark'] & {
+        color: #8be9fd;
+      }
+    }
+    &-comment,
+    &-deletion,
+    &-meta,
+    &-quote {
+      color: #6272a4;
+    }
+    &-literal,
+    &-number,
+    &-built_in {
+      color: #bd93f9;
+    }
+    &-doctag,
+    &-keyword,
+    &-literal,
+    &-name,
+    &-section,
+    &-selector-tag,
+    &-strong,
+    &-title,
+    &-type {
+      font-weight: 700;
+    }
+    &-emphasis {
+      font-style: italic;
+    }
+  }
+}

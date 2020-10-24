@@ -1,0 +1,45 @@
+@use '../../../../../vizality/src/.vizality/libraries/sass' as *;
+
+.material-tooltip {
+  padding: 10px 15px;
+  font-size: 16px;
+  z-index: 2000;
+  background-color: transparent;
+  border-radius: var('vz-border-radius');
+  color: color('contrast');
+  min-height: 36px;
+  line-height: 1.2;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  max-width: calc(100% - 4px);
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  visibility: hidden;
+  background-color: color('secondary-3');
+}
+
+.tooltip-hint {
+  background: color('secondary-4', .5);
+  width: calc(100% + 30px);
+  padding: 4px 0 5px;
+  margin: 10px 0 -10px -15px;
+  color: color('contrast');
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.backdrop {
+  position: absolute;
+  opacity: 0;
+  height: 7px;
+  width: 14px;
+  border-radius: 0 0 50% 50%;
+  background-color: #323232;
+  z-index: -1;
+  transform-origin: 50% 0%;
+  visibility: hidden;
+}

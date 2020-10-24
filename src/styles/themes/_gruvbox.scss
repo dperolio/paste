@@ -1,0 +1,160 @@
+[theme='gruvbox'] {
+  .hljs {
+    $base: &;
+    color: #ebdbb2;
+    &-subst {
+      color: #ebdbb2;
+    }
+    &-deletion,
+    &-formula,
+    &-keyword,
+    &-link,
+    &-selector-tag {
+      color: #fb4934;
+    }
+    &-built_in,
+    &-emphasis,
+    &-name,
+    &-quote,
+    &-strong,
+    &-title,
+    &-variable {
+      color: #83a598;
+    }
+    &-attr,
+    &-params,
+    &-template-tag,
+    &-type {
+      color: #fabd2f;
+    }
+    &-builtin-name,
+    &-doctag,
+    &-literal,
+    &-number {
+      color: #8f3f71;
+    }
+    &-code,
+    &-meta,
+    &-regexp,
+    &-selector-id,
+    &-template-variable {
+      color: #fe8019;
+    }
+    &-addition,
+    &-meta-string,
+    &-section,
+    &-selector-attr,
+    &-selector-class,
+    &-string,
+    &-symbol {
+      color: #b8bb26;
+    }
+    &-attribute,
+    &-bullet,
+    &-class,
+    &-function,
+    &-function #{$base}-keyword,
+    &-meta-keyword,
+    &-selector-pseudo,
+    &-tag {
+      color: #8ec07c;
+    }
+    &-comment {
+      color: #928374;
+    }
+    &-link_label,
+    &-literal,
+    &-number {
+      color: #d3869b;
+    }
+    &-comment,
+    &-emphasis {
+      font-style: italic;
+    }
+    &-section,
+    &-strong,
+    &-tag {
+      font-weight: 700;
+    }
+  }
+  &[mode='light'] {
+    .hljs {
+      $base: &;
+      color: #3c3836;
+      &-subst {
+        color: #3c3836;
+      }
+      &-deletion,
+      &-formula,
+      &-keyword,
+      &-link,
+      &-selector-tag {
+        color: #9d0006;
+      }
+      &-built_in,
+      &-emphasis,
+      &-name,
+      &-quote,
+      &-strong,
+      &-title,
+      &-variable {
+        color: #076678;
+      }
+      &-attr,
+      &-params,
+      &-template-tag,
+      &-type {
+        color: #b57614;
+      }
+      &-builtin-name,
+      &-doctag,
+      &-literal,
+      &-number {
+        color: #8f3f71;
+      }
+      &-code,
+      &-meta,
+      &-regexp,
+      &-selector-id,
+      &-template-variable {
+        color: #af3a03;
+      }
+      &-addition,
+      &-meta-string,
+      &-section,
+      &-selector-attr,
+      &-selector-class,
+      &-string,
+      &-symbol {
+        color: #79740e;
+      }
+      &-attribute,
+      &-bullet,
+      &-class,
+      &-function,
+      &-function #{$base}-keyword,
+      &-meta-keyword,
+      &-selector-pseudo,
+      &-tag {
+        color: #427b58;
+      }
+      &-comment {
+        color: #928374;
+      }
+      &-link_label,
+      &-literal,
+      &-number {
+        color: #8f3f71;
+      }
+      &-comment,
+      &-emphasis {
+        font-style: italic;
+      }
+      &-section,
+      &-strong,
+      &-tag {
+        font-weight: 700;
+      }
+    }
+  }
+}

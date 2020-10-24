@@ -1,0 +1,136 @@
+@use '../../../../vizality/src/.vizality/libraries/sass' as *;
+
+[theme='night-owl'] {
+  .hljs {
+    $base: &;
+    color: color('contrast');
+    &-keyword {
+      color: #c792ea;
+      font-style: italic;
+    }
+    &-built_in {
+      color: #addb67;
+      font-style: italic;
+    }
+    &-type {
+      color: #82aaff;
+    }
+    &-literal {
+      color: #ff5874;
+    }
+    &-number {
+      color: #f78c6c;
+    }
+    &-regexp {
+      color: #5ca7e4;
+    }
+    &-string {
+      color: #ecc48d;
+    }
+    &-subst {
+      color: #d3423e;
+    }
+    &-symbol {
+      color: #82aaff;
+    }
+    &-class {
+      color: #ffcb8b;
+    }
+    &-function {
+      color: #82aaff;
+    }
+    &-title {
+      color: #dcdcaa;
+      font-style: italic;
+    }
+    &-params {
+      color: #7fdbca;
+    }
+    &-comment {
+      color: #637777;
+      font-style: italic;
+    }
+    &-doctag {
+      color: #7fdbca;
+    }
+    &-meta {
+      color: #82aaff;
+    }
+    &-meta-keyword {
+      color: #82aaff;
+    }
+    &-meta-string {
+      color: #ecc48d;
+    }
+    &-section {
+      color: #82b1ff;
+    }
+    &-builtin-name,
+    &-name,
+    &-tag {
+      color: #7fdbca;
+    }
+    &-attr {
+      color: #7fdbca;
+    }
+    &-attribute {
+      color: #80cbc4;
+    }
+    &-variable {
+      color: #addb67;
+    }
+    &-bullet {
+      color: #d9f5dd;
+    }
+    &-code {
+      color: #80cbc4;
+    }
+    &-emphasis {
+      color: #c792ea;
+      font-style: italic;
+    }
+    &-strong {
+      color: #addb67;
+      font-weight: 700;
+    }
+    &-formula {
+      color: #c792ea;
+    }
+    &-link {
+      color: #ff869a;
+    }
+    &-quote {
+      color: #697098;
+      font-style: italic;
+    }
+    &-selector-tag {
+      color: #ff6363;
+    }
+    &-selector-id {
+      color: #fad430;
+    }
+    &-selector-class {
+      color: #addb67;
+      font-style: italic;
+    }
+    &-selector-attr,
+    &-selector-pseudo {
+      color: #c792ea;
+      font-style: italic;
+    }
+    &-template-tag {
+      color: #c792ea;
+    }
+    &-template-variable {
+      color: #addb67;
+    }
+    &-addition {
+      color: #addb67ff;
+      font-style: italic;
+    }
+    &-deletion {
+      color: #ef535090;
+      font-style: italic;
+    }
+  }
+}

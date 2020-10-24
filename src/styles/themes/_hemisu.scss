@@ -1,0 +1,52 @@
+@use '../../../../vizality/src/.vizality/libraries/sass' as *;
+
+[theme='hemisu'] {
+  .hljs {
+    color: #eee;
+    &-comment,
+    &-doctype {
+      color: #777777;
+    }
+    &-number {
+      color: #9fd3e6;
+    }
+    &-string,
+    &-regexp,
+    &-value {
+      color: #b1d631;
+    }
+    &-keyword,
+    &-title,
+    &-constant,
+    &-tag,
+    &-attribute {
+      color: #bbffaa;
+    }
+  }
+  &[mode='light'] {
+    .hljs {
+      color: #111;
+      &-comment,
+      &-doctype {
+        color: #999999;
+      }
+      &-number, 
+      &.ruby &-keyword {
+        color: #538192;
+      }
+      &-string,
+      &-regexp,
+      &.xml &-value,
+      &.html &-value {
+        color: #739200;
+      }
+      &-keyword,
+      &-title,
+      &-constant,
+      &-tag,
+      &-attribute {
+        color: #ff0055;
+      }
+    }
+  }
+}

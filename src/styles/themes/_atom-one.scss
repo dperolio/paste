@@ -1,0 +1,133 @@
+@use '../../../../vizality/src/.vizality/libraries/sass' as *;
+
+[theme='atom-one'] {
+  .hljs {
+    $base: &;
+    color: #abb2bf;
+    @at-root [mode='dark'] & {
+      color: color('contrast');
+    }
+    &-comment,
+    &-quote {
+      color: #5c6370;
+      font-style: italic;
+    }
+    &-doctag,
+    &-formula,
+    &-keyword {
+      color: #c678dd;
+    }
+    &-deletion,
+    &-name,
+    &-section,
+    &-selector-tag,
+    &-subst {
+      color: #e06c75;
+    }
+    &-literal {
+      color: #56b6c2;
+    }
+    &-addition,
+    &-attribute,
+    &-meta-string,
+    &-regexp,
+    &-string {
+      color: #98c379;
+    }
+    &-built_in,
+    &-class #{$base}-title {
+      color: #e6c07b;
+    }
+    &-attr,
+    &-number,
+    &-selector-attr,
+    &-selector-class,
+    &-selector-pseudo,
+    &-template-variable,
+    &-type,
+    &-variable {
+      color: #d19a66;
+    }
+    &-bullet,
+    &-link,
+    &-meta,
+    &-selector-id,
+    &-symbol,
+    &-title {
+      color: #61aeee;
+    }
+    &-emphasis {
+      font-style: italic;
+    }
+    &-strong {
+      font-weight: 700;
+    }
+    &-link {
+      text-decoration: underline;
+    }
+  }
+  &[mode='light'] {
+    .hljs {
+      $base: &;
+      color: #383a42;
+      &-comment,
+      &-quote {
+        color: #a0a1a7;
+        font-style: italic;
+      }
+      &-doctag,
+      &-formula,
+      &-keyword {
+        color: #a626a4;
+      }
+      &-deletion,
+      &-name,
+      &-section,
+      &-selector-tag,
+      &-subst {
+        color: #e45649;
+      }
+      &-literal {
+        color: #0184bb;
+      }
+      &-addition,
+      &-attribute,
+      &-meta-string,
+      &-regexp,
+      &-string {
+        color: #50a14f;
+      }
+      &-built_in,
+      &-class #{$base}-title {
+        color: #c18401;
+      }
+      &-attr,
+      &-number,
+      &-selector-attr,
+      &-selector-class,
+      &-selector-pseudo,
+      &-template-variable,
+      &-type,
+      &-variable {
+        color: #986801;
+      }
+      &-bullet,
+      &-link,
+      &-meta,
+      &-selector-id,
+      &-symbol,
+      &-title {
+        color: #4078f2;
+      }
+      &-emphasis {
+        font-style: italic;
+      }
+      &-strong {
+        font-weight: 700;
+      }
+      &-link {
+        text-decoration: underline; 
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+@use '../../../../vizality/src/.vizality/libraries/sass' as *;
+
+[theme='tomorrow'] {
+  .hljs {
+    color: #c5c8c6;
+    &-comment,
+    &-quote {
+      color: #969896;
+    }
+    &-deletion,
+    &-name,
+    &-regexp,
+    &-selector-class,
+    &-selector-id,
+    &-tag,
+    &-template-variable,
+    &-variable {
+      color: #c66;
+    }
+    &-built_in,
+    &-builtin-name,
+    &-link,
+    &-literal,
+    &-meta,
+    &-number,
+    &-params,
+    &-type {
+      color: #de935f;
+    }
+    &-attribute {
+      color: #f0c674;
+    }
+    &-addition,
+    &-bullet,
+    &-string,
+    &-symbol {
+      color: #b5bd68;
+    }
+    &-section,
+    &-title {
+      color: #81a2be;
+    }
+    &-keyword,
+    &-selector-tag {
+      color: #b294bb;
+    }
+    &-emphasis {
+      font-style: italic
+    }
+    &-strong {
+      font-weight: 700
+    }
+  }
+  &[mode='light'] {
+    .hljs {
+      color: #4d4d4c;
+      &-comment,
+      &-quote {
+        color: #8e908c
+      }
+      &-deletion,
+      &-name,
+      &-regexp,
+      &-selector-class,
+      &-selector-id,
+      &-tag,
+      &-template-variable,
+      &-variable {
+        color: #c82829
+      }
+      &-built_in,
+      &-builtin-name,
+      &-link,
+      &-literal,
+      &-meta,
+      &-number,
+      &-params,
+      &-type {
+        color: #f5871f
+      }
+      &-attribute {
+        color: #eab700
+      }
+      &-addition,
+      &-bullet,
+      &-string,
+      &-symbol {
+        color: #718c00
+      }
+      &-section,
+      &-title {
+        color: #4271ae
+      }
+      &-keyword,
+      &-selector-tag {
+        color: #8959a8
+      }
+      &-emphasis {
+        font-style: italic
+      }
+      &-strong {
+        font-weight: 700
+      }
+    }
+  }
+}
