@@ -144,9 +144,12 @@ for (let x = 0; x < Canvas.width; x++) {
 
 setInterval(() => {
   ctx.clearRect(0, 0, Canvas.width, Canvas.height);
-
+  let amount = 0;
   const time = new Date().getTime();
   for (const e in elements) {
-    elements[e].draw(ctx, time);
+    amount++;
+    if (amount % 2 === 0) {
+      elements[e].draw(ctx, time);
+    }
   }
 }, 10);
