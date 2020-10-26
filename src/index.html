@@ -1,20 +1,23 @@
-<html mode='dark' theme='atom-one' line-numbers>
+<!DOCTYPE html>
+<html mode='dark' theme='atom-one' line-numbers lang='en'>
 	<head>
 		<title>Vizality Paste</title>
     <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta author='Vizality'>
+    <meta description='Online content hosting service where users can store plain text, e.g. to source code snippets for code review via Discord.'>
+    <meta title='Vizality Paste'>
+    <meta name='robots' content='noindex, nofollow'>
+
     <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
-    <link  rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400&display=swap'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400&display=swap'>
 		<link rel='stylesheet' type='text/css' href='css/main.min.css'>
-
-		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
-
-		<meta name='robots' content='noindex, nofollow'>
 
     <style id='editor-font-family'>
       @font-face {
-        font-family: 'FiraCode Medium';
-        src: url('https://vizality.com/app/assets/fonts/firacode-medium/firacode-medium.woff2') format('woff2'),
-              url('https://vizality.com/app/assets/fonts/firacode-medium/firacode-medium.woff') format('woff');
+        font-family: 'Source Code Pro';
+        src: url('https://vizality.com/app/assets/fonts/source-code-pro/source-code-pro-1.woff2') format('woff2');
       }
     </style>
 
@@ -188,6 +191,7 @@
 		<div class='vz-navigation'>
       <div class='vz-navigation-section'>
         <a class='vz-navigation-logo' href='https://vizality.com'>
+          Vizality
           <svg class='vz-navigation-logo-svg' xmlns='http://www.w3.org/2000/svg' viewBox='0, 0, 400, 230'>
             <path class='vz-navigation-logo-path' fill='currentColor' d='M0.000 0.368 C 0.000 1.271,60.129 225.001,60.461 225.333 C 60.665 225.537,96.039 190.498,139.070 147.468 L 217.307 69.231 174.236 69.231 L 131.165 69.231 111.766 88.619 C 101.096 99.282,92.216 107.850,92.032 107.657 C 91.848 107.465,85.416 83.769,77.737 55.000 C 70.059 26.231,63.596 2.087,63.375 1.346 C 62.992 0.062,0.000 -0.910,0.000 0.368 M139.231 27.303 L 139.231 54.605 194.808 54.803 L 250.385 55.000 163.121 142.500 L 75.857 230.000 206.390 230.000 L 336.923 230.000 336.923 196.923 L 336.923 163.846 286.732 163.846 L 236.541 163.846 318.462 81.923 L 400.382 0.000 269.806 0.000 L 139.231 0.000 139.231 27.303'/>
           </svg>
@@ -227,6 +231,7 @@
       <code></code>
     </pre>
     <textarea class='vz-textarea' spellcheck='false' style='display: none;'></textarea>
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
     <script type='text/javascript' src='js/main.min.js'></script>
 	</body>
 </html>

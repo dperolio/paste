@@ -211,6 +211,7 @@ body {
     margin: 0 0 10px;
     display: flex;
     padding: 20px;
+    text-indent: -999999px;
     &-svg {
       @include size(100%);
     }
