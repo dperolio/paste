@@ -11,70 +11,82 @@ const fonts = {
       font-family: 'Anonymous Pro';
       src: url('https://vizality.com/app/assets/fonts/anonymous-pro/anonymous-pro.woff2') format('woff2'),
             url('https://vizality.com/app/assets/fonts/anonymous-pro/anonymous-pro.woff') format('woff');
+      font-display: swap;
     }`,
   DankMono: `
     @font-face {
       font-family: 'Dank Mono';
       src: url('https://vizality.com/app/assets/fonts/dank-mono/dank-mono.woff') format('woff');
+      font-display: swap;
     }`,
   DejaVuSansMono: `
     @font-face {
       font-family: 'DejaVu Sans Mono';
       src: url('https://vizality.com/app/assets/fonts/dejavu-sans-mono/dejavu-sans-mono.woff2') format('woff2'),
             url('https://vizality.com/app/assets/fonts/dejavu-sans-mono/dejavu-sans-mono.woff') format('woff');
+      font-display: swap;
     }`,
   FiraCodeMedium: `
     @font-face {
       font-family: 'FiraCode Medium';
       src: url('https://vizality.com/app/assets/fonts/firacode-medium/firacode-medium.woff2') format('woff2'),
             url('https://vizality.com/app/assets/fonts/firacode-medium/firacode-medium.woff') format('woff');
+      font-display: swap;
     }`,
   Gintronic: `
     @font-face {
       font-family: 'Gintronic';
       src: url('https://vizality.com/app/assets/fonts/gintronic/gintronic.woff2') format('woff2'),
             url('https://vizality.com/app/assets/fonts/gintronic/gintronic.woff') format('woff');
+      font-display: swap;
     }`,
   Hack: `
     @font-face {
       font-family: 'Hack';
       src: url('https://vizality.com/app/assets/fonts/hack/hack.woff2') format('woff2'),
             url('https://vizality.com/app/assets/fonts/hack/hack.woff') format('woff');
+      font-display: swap;
     }`,
   Inconsolata: `
     @font-face {
       font-family: 'Inconsolata';
       src: url('https://vizality.com/app/assets/fonts/inconsolata/inconsolata.woff2') format('woff2'),
             url('https://vizality.com/app/assets/fonts/inconsolata/inconsolata.woff') format('woff');
+      font-display: swap;
     }`,
   InputMono: `
     @font-face {
       font-family: 'Input Mono';
       src: url('https://vizality.com/app/assets/fonts/input-mono/input-mono.woff2') format('woff2'),
             url('https://vizality.com/app/assets/fonts/input-mono/input-mono.woff') format('woff');
+      font-display: swap;
     }`,
   JetBrainsMono: `
     @font-face {
       font-family: 'JetBrains Mono';
       src: url('https://vizality.com/app/assets/fonts/jetbrains-mono/jetbrains-mono.woff2') format('woff2'),
             url('https://vizality.com/app/assets/fonts/jetbrains-mono/jetbrains-mono.woff') format('woff');
+      font-display: swap;
     }`,
   Monoid: `
     @font-face {
       font-family: 'Monoid';
       src: url('https://vizality.com/app/assets/fonts/monoid/monoid.woff2') format('woff2'),
             url('https://vizality.com/app/assets/fonts/monoid/monoid.woff') format('woff');
+      font-display: swap;
     }`,
   OperatorMono: `
     @font-face {
       font-family: 'Operator Mono';
       src: url('https://vizality.com/app/assets/fonts/operator-mono/operator-mono.woff2') format('woff2'),
             url('https://vizality.com/app/assets/fonts/operator-mono/operator-mono.woff') format('woff');
+      font-display: swap;
     }`,
   SourceCodePro: `
     @font-face {
       font-family: 'Source Code Pro';
       src: url('https://vizality.com/app/assets/fonts/source-code-pro/source-code-pro-1.woff2') format('woff2');
+      font-display: swap;
     }`
 };
 

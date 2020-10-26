@@ -3,7 +3,7 @@
   "port": 7777,
   "keyLength": 10,
   "maxLength": 400000,
-  "staticMaxAge": 86400,
+  "staticMaxAge": 31536000,
   "recompressStaticAssets": true,
   "logging": [
     {

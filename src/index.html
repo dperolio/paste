@@ -5,9 +5,9 @@
     <meta charset='utf-8' />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta author='Vizality'>
-    <meta description='Online content hosting service where users can store plain text, e.g. to source code snippets for code review via Discord.'>
-    <meta title='Vizality Paste'>
+    <meta name='author' content='Vizality'>
+    <meta name='description' content='Online content hosting service where users can store plain text, e.g. to source code snippets for code review via Discord.'>
+    <meta name='title' content='Vizality Paste'>
     <meta name='robots' content='noindex, nofollow'>
 
     <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
@@ -26,7 +26,7 @@
     <div class='vz-canvas-wrapper'>
       <canvas id='canvas'></canvas>
     </div>
-    <div class='vz-navigation settings'>
+    <nav class='vz-navigation settings'>
       <div class='vz-navigation-inner'>
         <div class='vz-form-item'>
           <div class='input-field col s12'>
@@ -79,8 +79,8 @@
         <a class='vz-button secondary enabled btn waves-effect waves-light btn-flat vz-settings-reset'>Reset to Default</a>
         <a class='vz-button primary enabled btn waves-effect waves-light btn-flat vz-settings-done'>Done</a>
       </div>
-    </div>
-    <div class='vz-navigation syntax-themes'>
+    </nav>
+    <nav class='vz-navigation syntax-themes'>
       <div class='vz-navigation-inner'>
         <div class='vz-syntax-theme-item theme-item-agate btn-floating btn-large waves-effect waves-light btn tooltipped' data-position='left' data-tooltip='Agate'>
           <div class='vz-syntax-theme-block one'></div>
@@ -158,8 +158,8 @@
           <i class='vz-icon new'></i>
         </a>
       </div>
-    </div>
-		<div class='vz-navigation'>
+    </nav>
+		<nav class='vz-navigation'>
       <div class='vz-navigation-section'>
         <a class='vz-navigation-logo' href='https://vizality.com'>
           Vizality
@@ -196,7 +196,7 @@
           </a>
         </div>
       </div>
-		</div>
+		</nav>
     <pre style='display: none;' class='vz-locked hljs'>
       <div class='vz-lines'></div>
       <code></code>
