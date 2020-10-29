@@ -156,12 +156,13 @@ body {
 }
 
 .vz-locked {
-  @include size(calc(100% - #{var('vz-navigation-width')}), 100%);
+  @include size(calc(100vw - #{var('vz-navigation-width')}), 100vh);
   overflow: auto;
   font-size: var('vz-font-size');
   line-height: var('vz-line-height');
   font-family: var('vz-font-family');
   padding: 40px 0 0 0;
+  margin: 0;
   white-space: pre-wrap;
   display: flex;
   cursor: auto;
