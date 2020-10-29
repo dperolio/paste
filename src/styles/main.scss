@@ -121,9 +121,9 @@ body {
 }
 
 .vz-textarea {
-  @include size(calc(100% - #{var('vz-navigation-width')}), 100%);
+  @include size(calc(100vw - #{var('vz-navigation-width')}), 100vh);
   background: transparent;
-  border: 0px;
+  border: none;
   color: color('secondary-10');
   padding: 40px;
   outline: none;
