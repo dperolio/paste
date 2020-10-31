@@ -633,8 +633,6 @@ haste.prototype.resetSettings = function () {
   fontFamilyImport.innerHTML = fonts.SourceCodePro;
   fontFamilySelect.value = 'source-code-pro';
 
-  console.log('test');
-
   setCookie('font-size', 16);
   fontSizeSlider.noUiSlider.set(16);
 
